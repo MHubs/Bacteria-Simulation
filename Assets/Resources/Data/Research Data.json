@@ -1,0 +1,1251 @@
+{ 
+    "Data":
+    [
+        {
+            "name": "Sulfolobus solfataricus",
+            "tests":
+            [
+                {
+                    "name": "UV Irradiation",
+                    "comment": "Growth after exposure to UV Irradiation",
+                    "type": "time",
+                    "control": 6,
+                    "intervals":
+                    [
+                        {
+                            "time": 0,
+                            "amount": 6,
+                            "units": "mins"
+                        },
+                        {
+                            "time": 7.5,
+                            "amount": 5.9,
+                            "units": "mins"
+                        },
+                        {
+                            "time": 15,
+                            "amount": 3.4,
+                            "units": "mins"
+                        },
+                        {
+                            "time": 30,
+                            "amount": 6.1,
+                            "units": "mins"
+                        },
+                        {
+                            "time": 60,
+                            "amount": 6.5,
+                            "units": "mins"
+                        }
+                    ]
+                },
+                {
+                    "name": "Temperature",
+                    "type": "temp",
+                    "comment": "Growth after exposure to temperature",
+                    "control": 9,
+                    "intervals":
+                    [
+                        {
+                            "time": -196,
+                            "amount": 8,
+                            "units": "C"
+                        },
+                        {
+                            "time": -80,
+                            "amount": 7.4,
+                            "units": "C"
+                        },
+                        {
+                            "time": -20,
+                            "amount": 7.2,
+                            "units": "C"
+                        },
+                        {
+                            "time": 0,
+                            "amount": 7.4,
+                            "units": "C"
+                        },
+                        {
+                            "time": 4,
+                            "amount": 7.2,
+                            "units": "C"
+                        },
+                        {
+                            "time": 10,
+                            "amount": 7,
+                            "units": "C"
+                        },
+                        {
+                            "time": 25,
+                            "amount": 8,
+                            "units": "C"
+                        },
+                        {
+                            "time": 50,
+                            "amount": 7.5,
+                            "units": "C"
+                        },
+                        {
+                            "time": 70,
+                            "amount": 6.9,
+                            "units": "C"
+                        },
+                        {
+                            "time": 85,
+                            "amount": 8,
+                            "units": "C"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Haloterrigena hispanica",
+            "tests":
+            [
+                {
+                    "name": "UV Irradiation",
+                    "comment": "Growth after exposure to UV Irradiation",
+                    "type": "time",
+                    "control": 5.6,
+                    "intervals":
+                    [
+                        {
+                            "time": 0,
+                            "amount": 5.6,
+                            "units": "mins"
+                        },
+                        {
+                            "time": 7.5,
+                            "amount": 4.5,
+                            "units": "mins"
+                        },
+                        {
+                            "time": 15,
+                            "amount": 3.1,
+                            "units": "mins"
+                        },
+                        {
+                            "time": 30,
+                            "amount": 4.4,
+                            "units": "mins"
+                        },
+                        {
+                            "time": 60,
+                            "amount": 4.3,
+                            "units": "mins"
+                        }
+                    ]
+                },
+                {
+                    "name": "Temperature",
+                    "type": "temp",
+                    "comment": "Growth after exposure to temperature",
+                    "control": 7,
+                    "intervals":
+                    [
+                        {
+                            "time": -196,
+                            "amount": 0.2,
+                            "units": "C"
+                        },
+                        {
+                            "time": -80,
+                            "amount": 0.2,
+                            "units": "C"
+                        },
+                        {
+                            "time": -20,
+                            "amount": 5.9,
+                            "units": "C"
+                        },
+                        {
+                            "time": 0,
+                            "amount": 7.8,
+                            "units": "C"
+                        },
+                        {
+                            "time": 4,
+                            "amount": 7.9,
+                            "units": "C"
+                        },
+                        {
+                            "time": 10,
+                            "amount": 3.5,
+                            "units": "C"
+                        },
+                        {
+                            "time": 25,
+                            "amount": 3,
+                            "units": "C"
+                        },
+                        {
+                            "time": 50,
+                            "amount": 7,
+                            "units": "C"
+                        },
+                        {
+                            "time": 70,
+                            "amount": 6.9,
+                            "units": "C"
+                        },
+                        {
+                            "time": 85,
+                            "amount": 10.1,
+                            "units": "C"
+                        }
+                    ]
+                },
+                {
+                    "name": "Mars Simulation",
+                    "type": "time",
+                    "comment": "Growth after Mars simulation",
+                    "control": 11,
+                    "intervals":
+                    [
+                        {
+                            "time": 0,
+                            "amount": 11,
+                            "units": "hours"
+                        },
+                        {
+                            "time": 1,
+                            "amount": 11.1,
+                            "units": "hour"
+                        },
+                        {
+                            "time": 24,
+                            "amount": 10.9,
+                            "units": "hours"
+                        },
+                        {
+                            "time": 192,
+                            "amount": 9.8,
+                            "units": "hours"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Thermotoga neapolitana",
+            "tests":
+            [
+                {
+                    "name": "Temperature",
+                    "type": "temp",
+                    "comment": "Growth after exposure to temperature",
+                    "control": 4,
+                    "intervals":
+                    [
+                        {
+                            "time": -196,
+                            "amount": 3.8,
+                            "units": "C"
+                        },
+                        {
+                            "time": -80,
+                            "amount": 3.9,
+                            "units": "C"
+                        },
+                        {
+                            "time": -20,
+                            "amount": 4.8,
+                            "units": "C"
+                        },
+                        {
+                            "time": 0,
+                            "amount": 5,
+                            "units": "C"
+                        },
+                        {
+                            "time": 4,
+                            "amount": 4.9,
+                            "units": "C"
+                        },
+                        {
+                            "time": 10,
+                            "amount": 4.7,
+                            "units": "C"
+                        },
+                        {
+                            "time": 25,
+                            "amount": 4.8,
+                            "units": "C"
+                        },
+                        {
+                            "time": 50,
+                            "amount": 4.4,
+                            "units": "C"
+                        },
+                        {
+                            "time": 70,
+                            "amount": 4.1,
+                            "units": "C"
+                        },
+                        {
+                            "time": 85,
+                            "amount": 3.9,
+                            "units": "C"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Geobacillus thermantarcticus",
+            "tests":
+            [
+                {
+                    "name": "UV Irradiation",
+                    "comment": "Growth after exposure to UV Irradiation",
+                    "type": "time",
+                    "control": 5.2,
+                    "intervals":
+                    [
+                        {
+                            "time": 0,
+                            "amount": 5.2,
+                            "units": "mins"
+                        },
+                        {
+                            "time": 7.5,
+                            "amount": 5,
+                            "units": "mins"
+                        },
+                        {
+                            "time": 15,
+                            "amount": 4.15,
+                            "units": "mins"
+                        },
+                        {
+                            "time": 30,
+                            "amount": 4.1,
+                            "units": "mins"
+                        },
+                        {
+                            "time": 60,
+                            "amount": 2.3,
+                            "units": "mins"
+                        }
+                    ]
+                },
+                {
+                    "name": "Temperature",
+                    "type": "temp",
+                    "comment": "Growth after exposure to temperature",
+                    "control": 5.975,
+                    "intervals":
+                    [
+                        {
+                            "time": -196,
+                            "amount": 1.9,
+                            "units": "C"
+                        },
+                        {
+                            "time": -80,
+                            "amount": 5.7,
+                            "units": "C"
+                        },
+                        {
+                            "time": -20,
+                            "amount": 5.6,
+                            "units": "C"
+                        },
+                        {
+                            "time": 0,
+                            "amount": 6.2,
+                            "units": "C"
+                        },
+                        {
+                            "time": 4,
+                            "amount": 6.05,
+                            "units": "C"
+                        },
+                        {
+                            "time": 10,
+                            "amount": 6,
+                            "units": "C"
+                        },
+                        {
+                            "time": 25,
+                            "amount": 5.75,
+                            "units": "C"
+                        },
+                        {
+                            "time": 50,
+                            "amount": 5.8,
+                            "units": "C"
+                        },
+                        {
+                            "time": 70,
+                            "amount": 6.15,
+                            "units": "C"
+                        },
+                        {
+                            "time": 85,
+                            "amount": 4.1,
+                            "units": "C"
+                        }
+                    ]
+                },
+                {
+                    "name": "Mars Simulation",
+                    "type": "time",
+                    "comment": "Growth after Mars simulation",
+                    "control": 4.9,
+                    "intervals":
+                    [
+                        {
+                            "time": 0,
+                            "amount": 4.9,
+                            "units": "hours"
+                        },
+                        {
+                            "time": 1,
+                            "amount": 5,
+                            "units": "hour"
+                        },
+                        {
+                            "time": 24,
+                            "amount": 4.925,
+                            "units": "hours"
+                        },
+                        {
+                            "time": 192,
+                            "amount": 4.875,
+                            "units": "hours"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Clostridium Botulinum",
+            "tests":
+            [
+                {
+                    "name": "Mars Simulation",
+                    "type": "time",
+                    "comment": "Growth after time in simulated Nitrogen atmosphere",
+                    "control": 32,
+                    "intervals":
+                    [
+                        {
+                            "time": 0,
+                            "amount": 32,
+                            "control": 32,
+                            "units": "Months"
+                        },
+                        {
+                            "time": 1,
+                            "amount": 19,
+                            "control": 32,
+                            "units": "Month"
+                        },
+                        {
+                            "time": 6,
+                            "amount": 1.6,
+                            "control": 0.09,
+                            "units": "Months"
+                        },
+                        {
+                            "time": 10,
+                            "amount": 27,
+                            "control": 0.066,
+                            "units": "Months"
+                        }
+                    ]
+                },
+                {
+                    "name": "Vacuum Simulation",
+                    "type": "time",
+                    "comment": "Growth after time in simulated vacuum atmosphere",
+                    "control": 32,
+                    "intervals":
+                    [
+                        {
+                            "time": 0,
+                            "amount": 32,
+                            "control": 32,
+                            "units": "Months"
+                        },
+                        {
+                            "time": 1,
+                            "amount": 20,
+                            "control": 32,
+                            "units": "Month"
+                        },
+                        {
+                            "time": 6,
+                            "amount": 1.3,
+                            "control": 0.09,
+                            "units": "Months"
+                        },
+                        {
+                            "time": 10,
+                            "amount": 0.058,
+                            "control": 0.066,
+                            "units": "Months"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Klebsiella pneumoniae",
+            "tests":
+            [
+                {
+                    "name": "Mars Simulation",
+                    "type": "time",
+                    "comment": "Growth after time in simulated Nitrogen atmosphere",
+                    "control": 10,
+                    "intervals":
+                    [
+                        {
+                            "time": 0,
+                            "amount": 10,
+                            "control": 10,
+                            "units": "Months"
+                        },
+                        {
+                            "time": 1,
+                            "amount": 35,
+                            "control": 18,
+                            "units": "Month"
+                        },
+                        {
+                            "time": 4,
+                            "amount": 0.25,
+                            "control": 5.6,
+                            "units": "Months"
+                        },
+                        {
+                            "time": 6,
+                            "amount": 0.9,
+                            "control": 1,
+                            "units": "Months"
+                        },
+                        {
+                            "time": 8,
+                            "amount": 0.09,
+                            "control": 0.2,
+                            "units": "Months"
+                        }
+                    ]
+                },
+                {
+                    "name": "Vacuum Simulation",
+                    "type": "time",
+                    "comment": "Growth after time in simulated vacuum atmosphere",
+                    "control": 10,
+                    "intervals":
+                    [
+                        {
+                            "time": 0,
+                            "amount": 10,
+                            "control": 10,
+                            "units": "Months"
+                        },
+                        {
+                            "time": 1,
+                            "amount": 0.46,
+                            "control": 18,
+                            "units": "Month"
+                        },
+                        {
+                            "time": 4,
+                            "amount": 0.00001,
+                            "control": 5.6,
+                            "units": "Months"
+                        },
+                        {
+                            "time": 6,
+                            "amount": 0.00001,
+                            "control": 1,
+                            "units": "Months"
+                        },
+                        {
+                            "time": 8,
+                            "amount": 0.00001,
+                            "control": 0.2,
+                            "units": "Months"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Bacillus subtilis",
+            "tests":
+            [
+                {
+                    "name": "Monolayered Space Vacuum (Shielded)",
+                    "type": "time",
+                    "comment": "Survival after exposure to a space vacuum (while protected from radation)",
+                    "control": 8.1,
+                    "intervals":
+                    [
+                        {
+                            "time": 0,
+                            "amount": 8.1,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 13,
+                            "amount": 8,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 15,
+                            "amount": 7.4,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 100,
+                            "amount": 8,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 112,
+                            "amount": 7.2,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 1100,
+                            "amount": 6.05,
+                            "units": "Days"
+                        }
+                    ]
+                },
+                {
+                    "name": "Monolayered Space Vacuum (Exposed)",
+                    "type": "time",
+                    "comment": "Survival after exposure to a space vacuum and space radiation",
+                    "control": 5,
+                    "intervals":
+                    [
+                        {
+                            "time": 0,
+                            "amount": 5,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 13,
+                            "amount": 4.4,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 15,
+                            "amount": 2.7,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 100,
+                            "amount": 1.3,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 112,
+                            "amount": 2,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 1100,
+                            "amount": 0.6,
+                            "units": "Days"
+                        }
+                    ]
+                },
+                {
+                    "name": "Multilayered Space Vacuum (Shielded)",
+                    "type": "time",
+                    "comment": "Survival after exposure to a space vacuum (while protected from radation)",
+                    "control": 8,
+                    "intervals":
+                    [
+                        {
+                            "time": 0,
+                            "amount": 8,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 112,
+                            "amount": 7.4,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 1100,
+                            "amount": 7.7,
+                            "units": "Days"
+                        }
+                    ]
+                },
+                {
+                    "name": "Multilayered Space Vacuum (Exposed)",
+                    "type": "time",
+                    "comment": "Survival after exposure to a space vacuum and space radiation",
+                    "control": 6.1,
+                    "intervals":
+                    [
+                        {
+                            "time": 0,
+                            "amount": 6.1,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 10,
+                            "amount": 6,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 12,
+                            "amount": 5.7,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 1100,
+                            "amount": 6.6,
+                            "units": "Days"
+                        }
+                    ]
+                },
+                {
+                    "name": "Artificial Meteorite Embedded Space Vacuum",
+                    "type": "time",
+                    "comment": "Survival after exposure to a space vacuum and radiation (while embedded in meteorites)",
+                    "control": 8,
+                    "intervals":
+                    [
+                        {
+                            "time": 0,
+                            "amount": 8,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 10,
+                            "amount": 8,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 13,
+                            "amount": 8.1,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 15,
+                            "amount": 7.025,
+                            "units": "Days"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Richtersius coronifer",
+            "tests":
+            [
+                {
+                    "name": "Space Vacuum",
+                    "type": "time",
+                    "comment": "Growth after rehydration from outer space vacuum",
+                    "control": 7.5,
+                    "intervals":
+                    [
+                        {
+                            "time": 0,
+                            "amount": 8.05,
+                            "control": 7.5,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 1,
+                            "amount": 8.349,
+                            "control": 8.35,
+                            "units": "Day"
+                        },
+                        {
+                            "time": 2,
+                            "amount": 7.95,
+                            "control": 8.1,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 3,
+                            "amount": 7.9,
+                            "control": 8.3,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 5,
+                            "amount": 7,
+                            "control": 8.1,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 6,
+                            "amount": 7.2,
+                            "control": 7.95,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 8,
+                            "amount": 6.6,
+                            "control": 7.15,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 9,
+                            "amount": 6.4,
+                            "control": 7.75,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 12,
+                            "amount": 6.1,
+                            "control": 7.65,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 14,
+                            "amount": 5.2,
+                            "control": 7,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 15,
+                            "amount": 3.9,
+                            "control": 6,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 17,
+                            "amount": 4.2,
+                            "control": 5.8,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 19,
+                            "amount": 3,
+                            "control": 4.3,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 21,
+                            "amount": 2.05,
+                            "control": 3.6,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 23,
+                            "amount": 1.2,
+                            "control": 2.8,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 25,
+                            "amount": 0.5,
+                            "control": 1,
+                            "units": "Days"
+                        }
+                    ]
+                },
+                {
+                    "name": "Space Vacuum and Radiation Simulation",
+                    "type": "time",
+                    "comment": "Growth after rehydration from outer space vacuum and radiation",
+                    "control": 7.5,
+                    "intervals":
+                    [
+                        {
+                            "time": 0,
+                            "amount": 0.1,
+                            "control": 7.5,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 1,
+                            "amount": 0.1,
+                            "control": 8.35,
+                            "units": "Day"
+                        },
+                        {
+                            "time": 2,
+                            "amount": 0.1,
+                            "control": 8.1,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 3,
+                            "amount": 0.1,
+                            "control": 8.3,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 5,
+                            "amount": 0,
+                            "control": 8.1,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 6,
+                            "amount": 0,
+                            "control": 7.95,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 8,
+                            "amount": 0,
+                            "control": 7.15,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 9,
+                            "amount": 0,
+                            "control": 7.75,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 12,
+                            "amount": 0,
+                            "control": 7.65,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 14,
+                            "amount": 0,
+                            "control": 7,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 15,
+                            "amount": 0,
+                            "control": 6,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 17,
+                            "amount": 0,
+                            "control": 5.8,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 19,
+                            "amount": 0,
+                            "control": 4.3,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 21,
+                            "amount": 0,
+                            "control": 3.6,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 23,
+                            "amount": 0,
+                            "control": 2.8,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 25,
+                            "amount": 0,
+                            "control": 1,
+                            "units": "Days"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Milnesium tardigradum",
+            "tests":
+            [
+                {
+                    "name": "Space Vacuum",
+                    "type": "time",
+                    "comment": "Growth after rehydration from outer space vacuum",
+                    "control": 9.1,
+                    "intervals":
+                    [
+                        {
+                            "time": 0,
+                            "amount": 8.2,
+                            "control": 9.1,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 1,
+                            "amount": 8.15,
+                            "control": 8.7,
+                            "units": "Day"
+                        },
+                        {
+                            "time": 2,
+                            "amount": 7.95,
+                            "control": 8.2,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 3,
+                            "amount": 7.95,
+                            "control": 8,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 5,
+                            "amount": 7.9,
+                            "control": 8,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 7,
+                            "amount": 7.7,
+                            "control": 7.85,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 9,
+                            "amount": 7,
+                            "control": 7.4,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 10,
+                            "amount": 6.9,
+                            "control": 7.3,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 12,
+                            "amount": 6.2,
+                            "control": 6.9,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 13,
+                            "amount": 6.2,
+                            "control": 6.9,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 14,
+                            "amount": 6.2,
+                            "control": 6.9,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 15,
+                            "amount": 6.2,
+                            "control": 6.9,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 16,
+                            "amount": 6.2,
+                            "control": 6.9,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 17,
+                            "amount": 6.15,
+                            "control": 6.9,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 18,
+                            "amount": 6,
+                            "control": 6.25,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 19,
+                            "amount": 5.95,
+                            "control": 6.125,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 20,
+                            "amount": 5.5,
+                            "control": 6.125,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 21,
+                            "amount": 5.5,
+                            "control": 5.9,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 22,
+                            "amount": 4.9,
+                            "control": 5.85,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 23,
+                            "amount": 4.5,
+                            "control": 5.8,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 24,
+                            "amount": 4.4,
+                            "control": 5.65,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 25,
+                            "amount": 4.3,
+                            "control": 5.6,
+                            "units": "Days"
+                        }
+                    ]
+                },
+                {
+                    "name": "Space Vacuum and Radiation Simulation",
+                    "type": "time",
+                    "comment": "Growth after rehydration from outer space vacuum and radiation",
+                    "control": 9.1,
+                    "intervals":
+                    [
+                        {
+                            "time": 0,
+                            "amount": 3.6,
+                            "control": 9.1,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 1,
+                            "amount": 1.1,
+                            "control": 8.7,
+                            "units": "Day"
+                        },
+                        {
+                            "time": 2,
+                            "amount": 1,
+                            "control": 8.2,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 3,
+                            "amount": 1,
+                            "control": 8,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 5,
+                            "amount": 0.9,
+                            "control": 8,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 7,
+                            "amount": 0.7,
+                            "control": 7.85,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 9,
+                            "amount": 0.5,
+                            "control": 7.4,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 10,
+                            "amount": 0.5,
+                            "control": 7.3,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 12,
+                            "amount": 0.5,
+                            "control": 6.9,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 13,
+                            "amount": 0.5,
+                            "control": 6.9,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 14,
+                            "amount": 0.5,
+                            "control": 6.9,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 15,
+                            "amount": 0.5,
+                            "control": 6.9,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 16,
+                            "amount": 0.5,
+                            "control": 6.9,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 17,
+                            "amount": 0.5,
+                            "control": 6.9,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 18,
+                            "amount": 0.5,
+                            "control": 6.25,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 19,
+                            "amount": 0.5,
+                            "control": 6.125,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 20,
+                            "amount": 0.5,
+                            "control": 6.125,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 21,
+                            "amount": 0.4,
+                            "control": 5.9,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 22,
+                            "amount": 0.4,
+                            "control": 5.85,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 23,
+                            "amount": 0.4,
+                            "control": 5.8,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 24,
+                            "amount": 0.25,
+                            "control": 5.65,
+                            "units": "Days"
+                        },
+                        {
+                            "time": 25,
+                            "amount": 0.25,
+                            "control": 5.6,
+                            "units": "Days"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

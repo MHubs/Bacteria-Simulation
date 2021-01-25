@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{7F284E60-A9F1-E6CF-AB1F-83EA12904E85}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CreditsButton.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Simulation.cs" Line="155" Column="10" />
+      <File FileName="Assets/Scripts/ResearchSimulation.cs" />
+      <File FileName="Assets/Scripts/ResearchInterval.cs" />
+      <File FileName="Assets/Scripts/BacteriaDropdown.cs" />
+      <File FileName="Assets/Scripts/SetUp.cs" />
+      <File FileName="Assets/Scripts/ResearchTest.cs" />
+      <File FileName="Assets/Scripts/ResearchTestDropDown.cs" />
+      <File FileName="Assets/Scripts/CustomSlider.cs" Line="60" Column="1" />
+      <File FileName="Assets/Scripts/CreditsButton.cs" Line="23" Column="6" />
+      <File FileName="Assets/Scripts/Graph.cs" Line="43" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Bacteria Simulation" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="CreditsButton.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2c8963dd-5d5a-4a6f-9e1f-dc9c0298f833" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
