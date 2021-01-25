@@ -1,4 +1,4 @@
-<a href="https://github.com/MHubs/DrivAR">
+<a href="https://github.com/MHubs/Bacteria-Simulation">
     <img src="https://github.com/MHubs/Bacteria-Simulation/blob/master/Assets/Resources/Images/Bacteria.png" alt="Simulation logo" title="Microbe" align="right" height="60" />
 </a>
 
@@ -14,8 +14,8 @@ For my senior thesis in college, I'm writing about current planetary protections
 After compiling data from various sources and combining my thesis with my passion for programming, this is a simulation of the data with extrapolations to determine which kinds of microorganisms could potentially survive in space and other planets.
  
 ## Screenshots
-<a href="https://github.com/MHubs/DrivAR">
-    <img src="https://github.com/MHubs/DrivAR/blob/main/IMG_7076.PNG" alt="DrivAR logo" title="DrivAR" width="900" />
+<a href="https://github.com/MHubs/Bacteria-Simulation">
+    <img src="https://github.com/MHubs/Bacteria-Simulation/blob/master/Main%20Menu.png" alt="Simulation Main Menu" title="Microbe" width="900" />
 </a>
 
 ## Tech/Frameworks used
