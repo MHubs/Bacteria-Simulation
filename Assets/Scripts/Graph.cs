@@ -10,23 +10,27 @@ public class Graph : MonoBehaviour
     public float graphHeight;
     public bool useGradient = false;
     public Color gradientColor;
+    public RectTransform sliderRect;
 
     private float minX;
     private float minY;
-    private float maxX;
-    private float maxY;
 
     LineRenderer newLineRenderer;
-    int vertexAmount = 60;
-    float xInterval;
-
-    GameObject parentCanvas;
-    private List<double> bestFitCoeffs;
+    int vertexAmount = 100;
 
     // Use this for initialization
     void Start()
     {
-        parentCanvas = GameObject.Find("Canvas");
+        SetUpGraph();
+    }
+
+    public int GetVertexAmount()
+    {
+        return vertexAmount;
+    }
+
+    public void SetUpGraph()
+    {
         graphWidth = this.gameObject.GetComponent<RectTransform>().rect.width;
         graphHeight = this.gameObject.GetComponent<RectTransform>().rect.height;
         newLineRenderer = this.gameObject.GetComponent<LineRenderer>();
@@ -35,19 +39,25 @@ public class Graph : MonoBehaviour
         newLineRenderer.sortingLayerName = "UI";
 
         minX = -graphWidth / 2;
-        maxX = graphWidth / 2;
         minY = -graphHeight / 2;
-        maxY = graphHeight / 2;
 
-        xInterval = graphWidth / vertexAmount;
-        Debug.Log(newLineRenderer + " : " + xInterval);
     }
 
-    //Display 1 minute of data or as much as there is.
+    public void UpdateSlider(float currentTime, float start, float end)
+    {
+        float percent = (currentTime - start) / (end - start);
+
+        sliderRect.anchorMin = new Vector2(0, 0.3f);
+        sliderRect.anchorMax = new Vector2(percent, 1);
+    }
+
+
     public void Draw(List<ResearchInterval> researchIntervals, List<double> coeffs, float start, float end, float max, float min)
     {
         if (researchIntervals.Count == 0)
             return;
+
+        SetUpGraph();
 
         if (useGradient)
         {
@@ -63,7 +73,7 @@ public class Graph : MonoBehaviour
             } else
             {
                 keys[0] = new GradientColorKey(Color.red + gradientColor, 0.0f);
-                keys[1] = new GradientColorKey(Color.red + gradientColor, (researchIntervals[0].GetTimeSinceSimStart() - 0.2f - start) / (end - start));
+                keys[1] = new GradientColorKey(Color.red + gradientColor, (researchIntervals[0].GetTimeSinceSimStart() - start) / (end - start));
             }
 
             keys[2] = new GradientColorKey(gradientColor, (researchIntervals[0].GetTimeSinceSimStart() - start) / (end - start));
@@ -75,7 +85,7 @@ public class Graph : MonoBehaviour
                 keys[5] = new GradientColorKey(gradientColor, 1f);
             } else
             {
-                keys[4] = new GradientColorKey(Color.red + gradientColor, (researchIntervals[researchIntervals.Count - 1].GetTimeSinceSimStart() + 0.2f - start) / (end - start));
+                keys[4] = new GradientColorKey(Color.red + gradientColor, (researchIntervals[researchIntervals.Count - 1].GetTimeSinceSimStart() - start) / (end - start));
                 keys[5] = keys[0] = new GradientColorKey(Color.red + gradientColor, 1);
             } 
             
@@ -88,7 +98,6 @@ public class Graph : MonoBehaviour
             newLineRenderer.colorGradient = gradient;
         }
 
-        float x;
         int iter = 0;
         for (float i = start; i < end; i += (end-start) / vertexAmount)
         {
@@ -103,13 +112,6 @@ public class Graph : MonoBehaviour
             float y = (float)F(coeffs, i);
 
             float percentY = (y - min) / (max - min);
-
-
-
-            //y *= (graphHeight / ((float)Mathf.Abs((float)absMax) - add));
-            //x = iter * xInterval;
-
-
 
             newLineRenderer.SetPosition(iter, new Vector3((graphWidth * percentX) + minX, (graphHeight * percentY) + minY, -10));
             iter++;

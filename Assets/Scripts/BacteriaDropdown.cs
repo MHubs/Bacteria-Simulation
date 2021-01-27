@@ -37,8 +37,6 @@ public class BacteriaDropdown : MonoBehaviour
 
         dropdown.value = selected;
         dropdown.onValueChanged.AddListener(MOSelected);
-
-        testDD.SetUpDD(SetUp.instance.simulations[selectedMO]);
     }
 
      void MOSelected(int index)

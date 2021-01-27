@@ -60,14 +60,13 @@
     <Compile Include="Assets/Scripts/Simulation.cs" />
     <Compile Include="Assets/Scripts/ResearchTestDropDown.cs" />
     <Compile Include="Assets/Scripts/ResearchInterval.cs" />
-    <Compile Include="Assets/Scripts/UV.cs" />
     <Compile Include="Assets/Scripts/BacteriaDropdown.cs" />
+    <Compile Include="Assets/Scripts/Graph.cs" />
     <Compile Include="Assets/JSON/VectorTemplates.cs" />
     <Compile Include="Assets/Scripts/ResearchTest.cs" />
     <Compile Include="Assets/Scripts/SetUp.cs" />
     <Compile Include="Assets/Scripts/ResearchSimulation.cs" />
     <Compile Include="Assets/Scripts/CreditsButton.cs" />
-    <Compile Include="Assets/Scripts/Graph.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/JSON/readme.txt" />

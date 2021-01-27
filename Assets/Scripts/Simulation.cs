@@ -120,11 +120,11 @@ public class Simulation : MonoBehaviour
         startText.text = startTime + " " + currentResearchTest.GetIntervals()[0].GetUnits();
         endText.text = endTime + " " + currentResearchTest.GetIntervals()[currentResearchTest.GetIntervals().Count - 1].GetUnits();
 
-        timeText.text = System.Math.Round(currentTime, 3) + " " + currentResearchTest.GetIntervals()[0].GetUnits();
+        timeText.text = currentTime.ToString("0.000") + " " + currentResearchTest.GetIntervals()[0].GetUnits();
 
         amountText.text = currentResearchTest.GetComment();
 
-        percentText.text = "Press Play to start\nPercent Error:"  + ErrorSquared(currentResearchTest.GetIntervals(), bestFitCoeffs);
+        percentText.text = "Press Play to start";
 
         float amt = GetAmtValue(currentTime);
         if (amt < 0)
@@ -141,6 +141,8 @@ public class Simulation : MonoBehaviour
         graph.Draw(currentResearchTest.GetIntervals(), bestFitCoeffs, startTime, endTime, max, add);
         controlGraph.Draw(currentResearchTest.GetIntervals(), controlFitCoeffs, startTime, endTime, max, add);
 
+        graph.UpdateSlider(currentTime, startTime, endTime);
+
         Debug.Log("Done");
     }
 
@@ -148,9 +150,9 @@ public class Simulation : MonoBehaviour
     {
         double max = 0;
         int iter = 0;
-        for (float i = start; i < end; i += (end - start) / 60)
+        for (float i = start; i < end; i += (end - start) / graph.GetVertexAmount())
         {
-            if (iter >= 60)
+            if (iter >= graph.GetVertexAmount())
             {
                 break;
             }
@@ -168,9 +170,9 @@ public class Simulation : MonoBehaviour
     {
         double min = double.MaxValue;
         int iter = 0;
-        for (float i = start; i < end; i += (end - start) / 60)
+        for (float i = start; i < end; i += (end - start) / graph.GetVertexAmount())
         {
-            if (iter >= 60)
+            if (iter >= graph.GetVertexAmount())
             {
                 break;
             }
@@ -181,11 +183,8 @@ public class Simulation : MonoBehaviour
                 min = y;
             }
         }
-        //if (min < 0)
-        //{
+
         return min;
-        
-        //return 0;
     }
 
     public void onSliderSet(float value)
@@ -198,8 +197,8 @@ public class Simulation : MonoBehaviour
         }
         DisplayAppropriateBacteria(amt);
         timeSlider.value = currentTime;
-        timeText.text = System.Math.Round(currentTime, 3) + " " + currentResearchTest.GetIntervals()[0].GetUnits();
-        
+        timeText.text = currentTime.ToString("0.000") + " " + currentResearchTest.GetIntervals()[0].GetUnits();
+        graph.UpdateSlider(currentTime, startTime, endTime);
     }
 
     public void OnPlayClicked()
@@ -229,11 +228,11 @@ public class Simulation : MonoBehaviour
 
     IEnumerator ProgressTime()
     {
-        yield return new WaitForSeconds(1.0f/5.0f);
-        currentTime += 1.0f/5.0f;
+        yield return new WaitForSeconds(1.0f/24.0f);
+        currentTime += 1.0f/24.0f;
 
         timeSlider.value = currentTime;
-        timeText.text = System.Math.Round(currentTime,3) + " " + currentResearchTest.GetIntervals()[0].GetUnits();
+        timeText.text = currentTime.ToString("0.000") + " " + currentResearchTest.GetIntervals()[0].GetUnits();
 
         float amt = GetAmtValue(currentTime);
         if (amt < 0)
@@ -242,6 +241,8 @@ public class Simulation : MonoBehaviour
         }
 
         DisplayAppropriateBacteria(amt);
+
+        graph.UpdateSlider(currentTime, startTime, endTime);
 
         if (currentTime >= endTime)
         {
@@ -266,15 +267,6 @@ public class Simulation : MonoBehaviour
 
     private float GetControlValue(float x)
     {
-        //if (currentResearchTest.GetIntervals()[0].HasCurrentControl())
-        //{
-        //    return ControlInterpolate(currentResearchTest.GetIntervals(), x);
-        //}
-        //else
-        //{
-        //    return currentResearchTest.GetControl();
-        //}
-
 
         float amt = 0f;
         for (int i = 0; i < controlFitCoeffs.Count; i++)
@@ -282,35 +274,7 @@ public class Simulation : MonoBehaviour
             amt += (float)(controlFitCoeffs[i] * System.Math.Pow(x, i));
         }
 
-        //if (amt < 0)
-        //{
-        //    amt = 0.1f;
-        //}
-
         return Mathf.Abs(amt);
-    }
-
-    static float ControlInterpolate(List<ResearchInterval> f,
-                          float xi)
-    {
-        float result = 0; // Initialize result 
-
-        for (int i = 0; i < f.Count; i++)
-        {
-            // Compute individual terms 
-            // of above formula 
-            float term = f[i].GetCurrentControl();
-            for (int j = 0; j < f.Count; j++)
-            {
-                if (j != i)
-                    term = term * (xi - f[j].GetTimeSinceSimStart()) /
-                              (f[i].GetTimeSinceSimStart() - f[j].GetTimeSinceSimStart());
-            }
-
-            // Add current term to result 
-            result += term;
-        }
-        return result;
     }
 
     public double F(List<double> coeffs, double x)
@@ -525,7 +489,7 @@ private void DisplayAppropriateBacteria(float x)
             controlImages[i].SetActive(i < numBacteria);
         }
 
-        percentText.text = System.Math.Round(((x / controlAmt) * 100), 3) + "% of control culture";
+        percentText.text = ((x / controlAmt) * 100).ToString("0.000") + "% of control culture";
     }
 
     private void GenerateBacteriaImages()

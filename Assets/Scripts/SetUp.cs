@@ -33,7 +33,7 @@ public class SetUp
 
                         string orgName = organismSimulation["name"].str;
 
-                        Debug.Log("Starting " + orgName);
+                        Debug.Log("Loading " + orgName);
 
                         JSONObject orgTests = organismSimulation["tests"];
 

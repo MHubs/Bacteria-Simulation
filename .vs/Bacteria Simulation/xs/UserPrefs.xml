@@ -1,16 +1,15 @@
 ﻿<Properties StartupConfiguration="{7F284E60-A9F1-E6CF-AB1F-83EA12904E85}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CreditsButton.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SetUp.cs">
     <Files>
-      <File FileName="Assets/Scripts/Simulation.cs" Line="155" Column="10" />
+      <File FileName="Assets/Scripts/Simulation.cs" Line="175" Column="48" />
       <File FileName="Assets/Scripts/ResearchSimulation.cs" />
       <File FileName="Assets/Scripts/ResearchInterval.cs" />
-      <File FileName="Assets/Scripts/BacteriaDropdown.cs" />
-      <File FileName="Assets/Scripts/SetUp.cs" />
+      <File FileName="Assets/Scripts/BacteriaDropdown.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SetUp.cs" Line="99" Column="1" />
       <File FileName="Assets/Scripts/ResearchTest.cs" />
       <File FileName="Assets/Scripts/ResearchTestDropDown.cs" />
-      <File FileName="Assets/Scripts/CustomSlider.cs" Line="60" Column="1" />
-      <File FileName="Assets/Scripts/CreditsButton.cs" Line="23" Column="6" />
-      <File FileName="Assets/Scripts/Graph.cs" Line="43" Column="2" />
+      <File FileName="Assets/Scripts/CustomSlider.cs" Line="32" Column="34" />
+      <File FileName="Assets/Scripts/Graph.cs" Line="44" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,7 +17,7 @@
           <Node name="Bacteria Simulation" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="CreditsButton.cs" selected="True" />
+                <Node name="SetUp.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -28,7 +27,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2c8963dd-5d5a-4a6f-9e1f-dc9c0298f833" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2fa84ff0-6b9a-484b-9797-fd70e340122a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
