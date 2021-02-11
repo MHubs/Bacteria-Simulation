@@ -44,16 +44,28 @@ public class Simulation : MonoBehaviour
     private List<double> bestFitCoeffs;
     private List<double> controlFitCoeffs;
 
+    private Vector2 resolution;
+
     // Start is called before the first frame update
     void Start()
     {
+        resolution = new Vector2(Screen.width, Screen.height);
         GenerateBacteriaImages();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (resolution.x != Screen.width || resolution.y != Screen.height)
+        {
+
+            GenerateBacteriaImages();
+
+            SetUpSimulation(currentSim, currentTest);
+
+            resolution.x = Screen.width;
+            resolution.y = Screen.height;
+        }
     }
 
     public void UpdateGuessAmount(string amt)
@@ -73,7 +85,7 @@ public class Simulation : MonoBehaviour
 
     public void SetUpSimulation(ResearchSimulation simulation, string test)
     {
-        StopAllCoroutines();
+        Pause();
         currentSim = simulation;
         currentTest = test;
         currentResearchTest = currentSim.GetTest(currentTest);
@@ -494,7 +506,16 @@ private void DisplayAppropriateBacteria(float x)
 
     private void GenerateBacteriaImages()
     {
-        
+        foreach (GameObject obj in bacteriaImages)
+        {
+            Destroy(obj);
+        }
+        foreach (GameObject obj in controlImages)
+        {
+            Destroy(obj);
+        }
+        bacteriaImages.Clear();
+        controlImages.Clear();
 
         for (int i = 0; i < maximumBacteria; i++)
         {
@@ -503,19 +524,22 @@ private void DisplayAppropriateBacteria(float x)
 
             var rectTransform = bacteria.GetComponent<RectTransform>();
 
-            float radius = (petriDish.GetComponent<RectTransform>().rect.width / 2) - 32;
+            float sizeFactor = 0.11111111f;
+            float width = petriDish.GetComponent<RectTransform>().rect.width;
+
+            float radius = (petriDish.GetComponent<RectTransform>().rect.width / 2) - (sizeFactor * width);
 
             Vector2 pos = new Vector2(0.5f, 0.5f);
+            Vector3 target = (radius * Random.insideUnitCircle);
 
-            Vector3 target =  (radius * Random.insideUnitCircle);
 
             rectTransform.anchorMax = pos;
             rectTransform.anchorMin = pos;
             rectTransform.offsetMax = Vector2.zero;
             rectTransform.offsetMin = Vector2.zero;
-            rectTransform.sizeDelta = new Vector2(32, 32);
+            rectTransform.sizeDelta = new Vector2(sizeFactor * width, sizeFactor * width);
 
-            rectTransform.rotation = Quaternion.Euler(0,0,Random.Range(0,360));
+            rectTransform.rotation = Quaternion.Euler(0, 0, Random.Range(0, 360));
             rectTransform.localPosition = new Vector3(target.x, target.y, 0);
 
             bacteriaImages.Add(bacteria);
@@ -533,17 +557,20 @@ private void DisplayAppropriateBacteria(float x)
 
             var controlRectTransform = controlBacteria.GetComponent<RectTransform>();
 
-            float controlRadius = (controlPetriDish.GetComponent<RectTransform>().rect.width / 2) - 32;
+
+
+            float controlRadius = (controlPetriDish.GetComponent<RectTransform>().rect.width / 2) - (sizeFactor * width);
 
             Vector2 controlPos = new Vector2(0.5f, 0.5f);
 
             Vector3 controlTarget = (controlRadius * Random.insideUnitCircle);
+            
 
             controlRectTransform.anchorMax = controlPos;
             controlRectTransform.anchorMin = controlPos;
             controlRectTransform.offsetMax = Vector2.zero;
             controlRectTransform.offsetMin = Vector2.zero;
-            controlRectTransform.sizeDelta = new Vector2(32, 32);
+            controlRectTransform.sizeDelta = new Vector2(sizeFactor * width, sizeFactor * width);
 
             controlRectTransform.rotation = Quaternion.Euler(0, 0, Random.Range(0, 360));
             controlRectTransform.localPosition = new Vector3(controlTarget.x, controlTarget.y, 0);

@@ -24,6 +24,14 @@ public class Graph : MonoBehaviour
         SetUpGraph();
     }
 
+    void Update()
+    {
+        if (update)
+        {
+            //Draw(currentIntervals, currentCoeffs, currStart, currEnd, currMax, currMin);
+        }
+    }
+
     public int GetVertexAmount()
     {
         return vertexAmount;
@@ -51,11 +59,27 @@ public class Graph : MonoBehaviour
         sliderRect.anchorMax = new Vector2(percent, 1);
     }
 
+    private List<ResearchInterval> currentIntervals;
+    private List<double> currentCoeffs;
+    private float currStart;
+    private float currEnd;
+    private float currMax;
+    private float currMin;
+    private bool update = false;
 
     public void Draw(List<ResearchInterval> researchIntervals, List<double> coeffs, float start, float end, float max, float min)
     {
         if (researchIntervals.Count == 0)
             return;
+
+        update = true;
+
+        currentIntervals = researchIntervals;
+        currentCoeffs = coeffs;
+        currStart = start;
+        currEnd = end;
+        currMax = max;
+        currMin = min;
 
         SetUpGraph();
 
